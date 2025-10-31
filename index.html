@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sydnet Smart Hotel Receptionist</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="hotel-header">
+        <img src="img/hotel-logo.png" alt="Hotel Logo" class="hotel-logo" />
+        <h1>Welcome to [Hotel Name]</h1>
+        <h2>Smart Booking & Wi-Fi Access Portal</h2>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+            <input type="hidden" name="dst" value="$(link-orig)" />
+            <input type="hidden" name="popup" value="true" />
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter your username" />
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter your password" />
+            <input type="submit" value="Connect to Wi-Fi" class="blue-button" />
+        </form>
+    </section>
+
+    <!-- Services Section -->
+     
+<section class="services-grid">
+    <!-- Book a Room -->
+    <div class="service-card">
+        <img src="img/room.png" alt="Room Booking" />
+        <h3>Book a Room</h3>
+        <form onsubmit="return validateAndConfirm(this, 'room')">
+            <label><input type="radio" name="room" value="Luxury Suite" required /> Luxury Suite</label><br />
+            <label><input type="radio" name="room" value="Standard Room" /> Standard Room</label><br />
+            <label><input type="radio" name="room" value="Budget Room" /> Budget Room</label><br />
+            <label><input type="radio" name="room" value="Not Interested" /> Not Interested</label><br />
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    <!-- Order Food -->
+    <div class="service-card">
+        <img src="img/restaurant.png" alt="Restaurant" />
+        <h3>Order Food</h3>
+        <form onsubmit="return validateAndConfirm(this, 'food')">
+            <label><input type="radio" name="food" value="Jollof Rice & Chicken" required /> Jollof Rice &
+                Chicken</label><br />
+            <label><input type="radio" name="food" value="Egusi Soup & Pounded Yam" /> Egusi Soup & Pounded
+                Yam</label><br />
+            <label><input type="radio" name="food" value="Fruit Salad & Juice" /> Fruit Salad & Juice</label><br />
+            <label><input type="radio" name="food" value="Not Interested" /> Not Interested</label><br />
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <!-- Spa & Wellness -->
+    <div class="service-card">
+        <img src="img/spa.png" alt="Spa Services" />
+        <h3>Spa & Wellness</h3>
+        <form onsubmit="return validateAndConfirm(this, 'spa')">
+            <label><input type="radio" name="spa" value="Full Body Massage" required /> Full Body Massage</label><br />
+            <label><input type="radio" name="spa" value="Facial Treatment" /> Facial Treatment</label><br />
+            <label><input type="radio" name="spa" value="Sauna Session" /> Sauna Session</label><br />
+            <label><input type="radio" name="spa" value="Not Interested" /> Not Interested</label><br />
+            <button type="submit">Book Session</button>
+        </form>
+    </div>
+
+    <!-- Laundry Service -->
+    <div class="service-card">
+        <img src="img/laundry.png" alt="Laundry" />
+        <h3>Laundry Service</h3>
+        <form onsubmit="return validateAndConfirm(this, 'laundry')">
+            <label><input type="radio" name="laundry" value="Wash & Fold" required /> Wash & Fold</label><br />
+            <label><input type="radio" name="laundry" value="Dry Cleaning" /> Dry Cleaning</label><br />
+            <label><input type="radio" name="laundry" value="Ironing Only" /> Ironing Only</label><br />
+            <label><input type="radio" name="laundry" value="Not Interested" /> Not Interested</label><br />
+            <button type="submit">Request Service</button>
+        </form>
+    </div>
+
+    <!-- Guest Reference Guide -->
+    <div class="service-card">
+        <img src="img/guide.jpg" alt="Guest Guide" class="responsive-image" />
+        <h3>Guest Reference Guide</h3>
+        <p>Find contact info, service hours, hotel policies, and directions in one place.</p>
+        <a href="reference.html" class="blue-button">Open Guide</a>
+    </div>
+
+</section>
+
+
+    <!-- Advertisement Section -->
+<section class="ads-section">
+    <h2>Advertise Your Business Here</h2>
+    <p>Reach hundreds of guests daily. Contact reception to book ad space.</p>
+
+    <div class="ad-carousel">
+        <div class="ad-card">
+            <img src="img/ad1.jpg" alt="Ad 1" />
+            <h4>Company A</h4>
+            <p>Luxury Spa & Wellness Services</p>
+        </div>
+        <div class="ad-card">
+            <img src="img/ad2.jpg" alt="Ad 2" />
+            <h4>Company B</h4>
+            <p>Fast Laundry Pickup & Delivery</p>
+        </div>
+        <div class="ad-card">
+            <img src="img/ad3.jpg" alt="Ad 3" />
+            <h4>Company C</h4>
+            <p>Delicious Local & Continental Dishes</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 [Hotel Name]. Powered by Starlink & MikroTik. Designed by Sydnet Technologies.</p>
+    </footer>
+
+    <script src="js/portal.js"></script>
+</body>
+
+</html>

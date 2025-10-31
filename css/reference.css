@@ -1,0 +1,85 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf7;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* Header */
+.hotel-header {
+    background-color: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hotel-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.hotel-header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.hotel-header h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+/* Reference Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-left: 6px solid #ff9800;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.service-card h3 {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.service-card p,
+.service-card ul {
+    margin-bottom: 10px;
+}
+
+.service-card ul {
+    padding-left: 20px;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
